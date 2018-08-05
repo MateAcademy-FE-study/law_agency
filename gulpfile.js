@@ -18,12 +18,12 @@ var path = {
         fonts: 'build/fonts/'
     },
     src: {
-        html: 'src/*.html',
+        html: 'src/index.html',
         js: 'src/js/*.js',
         style: 'src/style/main.scss',
         css: 'src/style/*.css',
         img: 'src/images/*.*',
-        fonts: 'src/fonts/*.*'
+        fonts: 'src/fonts/**/*.*'
     },
     watch: {
         html: 'src/*.html',
