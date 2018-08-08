@@ -1,0 +1,54 @@
+.form {
+	color: $white-color;
+	display: flex;
+	justify-content: center;
+	padding: 5rem 8rem;
+	background-image: url(../images/bg-form.svg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	form {
+		width:100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1rem 0;
+		button {
+			background-color: transparent;
+			border: 0.2rem solid $white-color;
+			padding: 1rem;
+			color: $white-color;
+			font-size:1.2rem;
+			text-transform: uppercase;
+			font-weight: 700;
+			cursor: pointer;
+			
+			&:hover {
+				box-shadow:inset 0 0 0.8rem $white-color;
+				
+			}
+		}
+	}
+	&__content {
+		margin:0;
+		&:not(:first-child) {
+			width:18%;
+			}
+		&:first-child {
+			width: 40%;
+			font-size: 2rem;
+			white-space: nowrap;
+		}
+		&:last-child {
+			display: flex;
+			flex-direction: column;
+			a {
+				text-decoration: none;
+				color: $white-color;
+			}
+		}
+		& > p {
+			margin: 0;
+		}
+	}
+}

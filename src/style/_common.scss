@@ -1,4 +1,17 @@
+* {
+	box-sizing: border-box;
+}
+html {
+	font-size: 10px;
+	font-family: sans-serif;
+}
+body {
+	background-color:$bg-gray-color;
+}
 .wrapper {
     max-width: 1200px;
     margin: 0 auto;
+    background-color:$bg-gray-color;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    min-height: 100vh;
 }
