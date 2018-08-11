@@ -47,6 +47,7 @@ gulp.task('scripts', function () {
         .pipe(rigger())
         .pipe(uglify())
         .pipe(gulp.dest(path.build.js));
+
 });
 
 gulp.task('styles', function () {

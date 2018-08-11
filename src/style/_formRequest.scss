@@ -1,33 +1,48 @@
+%btn {
+	background-color: transparent;
+	border: 0.2rem solid $white-color;
+	padding: 1rem;
+	color: $white-color;
+	font-size:1.2rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	cursor: pointer;
+	&:hover {
+		box-shadow:inset 0 0 0.8rem $white-color;
+		
+	}
+}
 .form {
 	color: $white-color;
 	display: flex;
 	justify-content: center;
-	padding: 5rem 8rem;
-	background-image: url(../images/bg-form.svg);
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	
 	form {
 		width:100%;
 		display: flex;
-		justify-content: space-between;
+		flex-direction:column;
 		align-items: center;
-		padding: 1rem 0;
-		button {
-			background-color: transparent;
-			border: 0.2rem solid $white-color;
-			padding: 1rem;
-			color: $white-color;
-			font-size:1.2rem;
-			text-transform: uppercase;
-			font-weight: 700;
-			cursor: pointer;
-			
-			&:hover {
-				box-shadow:inset 0 0 0.8rem $white-color;
-				
+		justify-content: space-between;
+		padding: 0;
+		> div {	
+			width: inherit;
+			background-image: url(../images/bg-form.svg);
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			&:first-child {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 5rem 8rem;
+				margin-bottom: 1rem;
+				button {
+					@extend %btn;		
+					
+				}
 			}
 		}
+		
 	}
 	&__content {
 		margin:0;
@@ -50,5 +65,39 @@
 		& > p {
 			margin: 0;
 		}
+	}
+	&__request {
+		width: 100%;
+		display:flex;
+		flex-direction:column;
+		align-items: center;
+		padding:2rem;
+		> div {
+			width:100%;
+			max-width: 105rem;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(2, 5rem);
+			grid-gap:1rem 1rem;
+			input {
+				width: 100%;
+				margin:0;
+				border: none;
+				padding: 1rem;
+				outline: none;
+				//border-bottom: 0.2rem solid darken($white-color, 50%);
+			}
+			textarea {
+
+				grid-column: 2;
+				grid-row: 1/3;
+			}
+		}
+		button {
+			@extend %btn;
+			margin: 1rem 0;			
+			width: 30%;
+		}
+		
 	}
 }

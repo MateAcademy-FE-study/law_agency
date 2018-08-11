@@ -16,22 +16,36 @@
     	
     	<section class="form">
     		<form>
-    			<h2 class="form__content">Есть вопросы? Обращайтесь!</h2>
-    			<p class="form__content">Наш менеджер свяжется c Вами в течении 2-х часов.</p>
-    			<button class="form__content">написать</button>
-    			<div class="form__content">
-    				<p>Или звоните по телефону</p>
-    				<div>
-    					<span class="fas fa-phone-square"></span>
-    					<a href="tel:+380961111111">+38(096) 111 11 11</a>
+    			<div>
+    				<h2 class="form__content">Есть вопросы? Обращайтесь!</h2>
+    				<p class="form__content">Наш менеджер свяжется c Вами в течении 2-х часов.</p>
+    				<button class="form__content">написать</button>
+    				<div class="form__content">
+    					<p>Или звоните по телефону</p>
+    					<div>
+    						<span class="fas fa-phone-square"></span>
+    						<a href="tel:+380961111111">+38(096) 111 11 11</a>
+    					</div>
     				</div>
     			</div>
     		</form>
+    		
+    		
+    	
     	</section>
     </div>
     
     
-    
+    <template>
+    	<div class="form_request">
+    		<div>
+    			<input type="text" name="name" placeholder="Имя">
+    			<input type="email" name="email" placeholder="Электронный адрес">
+    			<textarea placeholder="Ваш вопрос"></textarea>
+    		</div>
+    		<button>отправить</button>
+    	</div>
+    </template>
     <script src="js/script.js"></script>
 </body>
 
