@@ -1,1 +1,1 @@
-"use strict";window.onload=function(){console.log("Hello!")};
+"use strict";window.onload=function(){var e=document.querySelector(".form__request"),t=document.querySelector("button.form__content"),o=!0;t.addEventListener("click",function(){o?e.classList.add("opened"):e.classList.remove("opened"),o=!o})};
