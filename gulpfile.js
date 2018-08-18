@@ -47,6 +47,7 @@ gulp.task('scripts', function () {
         .pipe(rigger())
         .pipe(uglify())
         .pipe(gulp.dest(path.build.js));
+
 });
 
 gulp.task('styles', function () {
@@ -95,7 +96,7 @@ gulp.task('clean', function () {
     return del.sync(path.clean);
 });
 
-gulp.task('build', ['clean', 'html', 'scripts', 'styles', 'css', 'fonts', 'images']);
+gulp.task('build', ['clean', 'html', 'css', 'styles', 'images', 'fonts', 'scripts']);
 
 gulp.task('watch', function () {
     gulp.watch(path.watch.style, ['styles']);

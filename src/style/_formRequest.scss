@@ -1,33 +1,62 @@
+%btn {
+	background-color: transparent;
+	border: 0.2rem solid $white-color;
+	padding: 1rem;
+	color: $white-color;
+	font-size:1.2rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	cursor: pointer;
+	outline-color: $white-color;
+	&:hover {
+		box-shadow:inset 0 0 0.8rem $white-color;
+		
+	}
+}
+%fields {
+	padding: 1rem;
+	outline-color: $white-color;
+	outline-offset: -0.2rem;
+	outline-width: 0.5rem;
+	transition: all 0.3s linear;
+	
+	&:focus {
+		outline-color: $pink-color;
+		outline-width: 10px;
+	}
+
+}
 .form {
 	color: $white-color;
 	display: flex;
 	justify-content: center;
-	padding: 5rem 8rem;
-	background-image: url(../images/bg-form.svg);
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	
 	form {
 		width:100%;
 		display: flex;
-		justify-content: space-between;
+		flex-direction:column;
 		align-items: center;
-		padding: 1rem 0;
-		button {
-			background-color: transparent;
-			border: 0.2rem solid $white-color;
-			padding: 1rem;
-			color: $white-color;
-			font-size:1.2rem;
-			text-transform: uppercase;
-			font-weight: 700;
-			cursor: pointer;
-			
-			&:hover {
-				box-shadow:inset 0 0 0.8rem $white-color;
-				
+		justify-content: space-between;
+		padding: 0;
+		> div {	
+			width: inherit;
+			background-image: url(../images/bg-form.svg);
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			&:first-child {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 5rem 8rem;
+				margin-bottom: 1rem;
+				button {
+					@extend %btn;		
+					
+				}
 			}
 		}
+		
 	}
 	&__content {
 		margin:0;
@@ -35,6 +64,7 @@
 			width:18%;
 			}
 		&:first-child {
+			color: inherit;
 			width: 40%;
 			font-size: 2rem;
 			white-space: nowrap;
@@ -50,5 +80,43 @@
 		& > p {
 			margin: 0;
 		}
+	}
+	&__request {
+		display: none;
+		&.opened {
+			width: 100%;
+			display:flex!important;
+			flex-direction:column;
+			align-items: center;
+			padding:2rem;
+			> div {
+				width:100%;
+				max-width: 105rem;
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				grid-template-rows: repeat(2, 5rem);
+				grid-gap:1rem 1rem;
+				font-size:1.2rem;
+
+				input {
+					@extend %fields;
+					width: 100%;
+					margin:0;
+					border: none;					
+				}
+				textarea {
+					@extend %fields;
+					resize: none;
+					grid-column: 2;
+					grid-row: 1/3;
+				}
+			}
+			button {
+				@extend %btn;
+				margin: 1rem 0;			
+				width: 30%;
+			}
+		}	
+		
 	}
 }
